@@ -3,11 +3,17 @@ import type { Metadata, Viewport } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
+// FIXED: Added `display: "swap"` so Vercel doesn't break if Google Fonts fail
 const _inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+const _geistMono = Geist_Mono({
+  subsets: ["latin"],
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "WealthWise AI - Future-Proof Money Management",
@@ -48,7 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+      <body
+        className={`${_inter.variable} ${_geistMono.variable} font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary`}
+      >
         {children}
       </body>
     </html>
