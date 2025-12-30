@@ -71,7 +71,7 @@ The AI Advisor can answer queries such as:
 - 🧾 “Where did I spend the most this month?”  
 - 💸 “How can I save more based on my spending habits?”  
 - 📈 “What percentage of my income goes to food or transport?”  
-- 💬 “Give me some smart investment tips.”  
+- 💬 “Give me some smart investment tipss.”  
 
 The responses are **friendly, personalized, and insight-driven**, thanks to the **OpenAI GPT API** integration.
 
