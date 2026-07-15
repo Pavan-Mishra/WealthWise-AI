@@ -160,14 +160,6 @@ export function USPSection() {
               <p className="text-sm text-muted-foreground leading-relaxed group-hover:text-foreground/70 transition-colors duration-300">
                 {feature.description}
               </p>
-
-              {/* Subtle arrow indicator */}
-              <div className="mt-4 flex items-center gap-2 text-accent opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
-                <span className="text-sm font-medium">Learn more</span>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
             </div>
           ))}
         </div>

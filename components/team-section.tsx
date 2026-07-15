@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Github, Linkedin, Twitter, Code, Server, Shield } from "lucide-react"
+import { Github, Linkedin, Globe, Code, Server, Shield } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -16,8 +16,11 @@ const teamMembers = [
     initials: "PM",
     icon: Code,
     color: "from-cyan-500 to-blue-500",
-    skills: ["React Native", "Flutter", "UI/UX"],
-    bio: "Building beautiful mobile experiences",
+    skills: ["Kotlin", "Python", "System Design"],
+    bio: "Crafting seamless mobile and web experiences.",
+    github: "https://github.com/Pavan-Mishra",
+    linkedin: "https://www.linkedin.com/in/pavan-mishra11/",
+    portfolio: "https://pavan-mishra.github.io/My-Portfolio/",
   },
   {
     name: "Ojas Lad",
@@ -25,8 +28,11 @@ const teamMembers = [
     initials: "OL",
     icon: Server,
     color: "from-emerald-500 to-teal-500",
-    skills: ["Node.js", "Python", "AWS"],
+    skills: ["Java", "MongoDB", "AWS"],
     bio: "Architecting scalable systems",
+    github: "https://github.com/ojaslad10",
+    linkedin: "https://www.linkedin.com/in/ojas-lad-527079340/",
+    portfolio: "https://github.com/ojaslad10",
   },
   {
     name: "Vishal Patkal",
@@ -34,8 +40,11 @@ const teamMembers = [
     initials: "VP",
     icon: Shield,
     color: "from-violet-500 to-purple-500",
-    skills: ["Cybersecurity", "Compliance", "Audit"],
+    skills: ["Cybersecurity", "Compliance", "Python"],
     bio: "Keeping your data safe",
+    github: "#",
+    linkedin: "https://www.linkedin.com/in/vishal-patkal-952a6127b/",
+    portfolio: "#",
   },
 ]
 
@@ -212,10 +221,20 @@ export function TeamSection() {
 
                     {/* Social links */}
                     <div className="flex items-center gap-3">
-                      {[Github, Linkedin, Twitter].map((Icon, i) => (
+                      {(
+                        [
+                          { icon: Github, href: member.github, label: "GitHub" },
+                          { icon: Linkedin, href: member.linkedin, label: "LinkedIn" },
+                          { icon: Globe, href: member.portfolio, label: "Portfolio" },
+                        ] as const
+                      ).map(({ icon: Icon, href, label }) => (
                         <a
-                          key={i}
-                          href="#"
+                          key={label}
+                          href={href}
+                          {...(href !== "#"
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
+                          aria-label={`${member.name} ${label}`}
                           className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
                         >
                           <Icon className="w-4 h-4" />

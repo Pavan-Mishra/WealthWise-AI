@@ -108,12 +108,18 @@ export function HeroSection() {
               View on GitHub
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <button className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-border hover:border-accent/50 hover:bg-accent/5 transition-all duration-300">
+            <a
+              href="https://drive.google.com/drive/folders/1rmZ2K030ax0UBkfR7GZOqYbFW9qt0oos?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-border hover:border-accent/50 hover:bg-accent/5 transition-all duration-300"
+            >
               <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
                 <Play className="w-3 h-3 text-accent fill-accent" />
               </div>
               Watch demo
-            </button>
+            </a>
+
           </div>
 
           {/* Visual showcase */}

@@ -37,7 +37,7 @@ export default function Home() {
         <USPSection />
         <InnovationSection />
         <RoadmapSection />
-        <CTASection />
+        
         <TeamSection />
         <Footer />
       </main>

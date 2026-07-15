@@ -55,7 +55,7 @@ export function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/Pavan-Mishra/WealthWiseApp-fintech"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-full bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors"
@@ -94,7 +94,7 @@ export function Navbar() {
             </a>
           ))}
           <a
-            href="https://github.com"
+            href="https://github.com/Pavan-Mishra/WealthWiseApp-fintech"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center py-3 mt-4 rounded-full bg-foreground text-background font-medium"

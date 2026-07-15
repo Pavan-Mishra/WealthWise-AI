@@ -18,7 +18,7 @@ export function Footer() {
             {["About", "Features", "Roadmap", "Team", "GitHub"].map((link) => (
               <a
                 key={link}
-                href={link === "GitHub" ? "https://github.com" : `#${link.toLowerCase()}`}
+                href={link === "GitHub" ? "https://github.com/Pavan-Mishra/WealthWiseApp-fintech" : `#${link.toLowerCase()}`}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 target={link === "GitHub" ? "_blank" : undefined}
                 rel={link === "GitHub" ? "noopener noreferrer" : undefined}
